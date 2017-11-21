@@ -1,0 +1,317 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: auto;
+  overflow: auto;
+}
+
+/*---------------------------------/header/-----------------------------------*/
+.header {
+  width: auto;
+  overflow-x: hidden;
+}
+
+/*--- LOGO + Login ---*/
+.header_top {
+  width: 100vw;
+  overflow: auto;
+  border-bottom: 3px solid #f16521;
+  background: url("FOTOS/meal.jpg") no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: scroll;
+  height:50vh;
+}
+.login {
+  width: auto;
+  overflow: auto;
+  padding-right: 4vw;
+  padding-top: 2vw;
+
+}
+.registar {
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0 0 0.5em;
+  font-weight: bolder;
+}
+.entrar {
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0.5em 0 0;
+  font-weight: bolder;
+  border-right: 1px solid #fff;
+}
+#popup_registar, #popup_entrar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+}
+.popup_container {
+  width: 30%;
+  margin: 75px auto;
+  text-align: left;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+}
+.window {
+  padding: 0.5em;
+  background-color: #f1f1f1;
+  margin-bottom: 1em;
+}
+.window h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0 auto;
+}
+.cross {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  float: right;
+}
+.cross:hover,
+.cross:focus {
+  color: red;
+  cursor: pointer;
+}
+.dados input {
+  width: 100%;
+  padding: 1em 2em;
+  margin: 0.75em 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.enterbtn {
+  width: 100%;
+  padding: 1em 10em;
+  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  box-sizing: border-box; /*Verificar como se mantem o tamanho no page resize*/
+}
+.enterbtn :hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
+.rodape {
+  background-color: #f1f1f1;
+  display: block;
+}
+.psw a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 12px;
+  padding: 0.5em;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+/**********************/
+
+.header_top a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  width: 100%;
+}
+.logo img {
+  overflow: auto;
+  display: block;
+  width: 40vw;
+  margin-left:30vw;
+}
+.slogan h5 {
+  width: 100%;
+  text-align: center;
+  display: block;
+  overflow: auto;
+  margin: auto;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+}
+
+
+/*--- MENU ---*/
+
+.header_center {
+  width: auto;
+  overflow-x: hidden;
+  margin-top: 10px;
+}
+.menu_wrapper {
+  width: auto;
+  overflow: auto;
+  margin: 0 auto;
+  list-style: none;
+  background-color: #f16521;
+  border-radius: 5px;
+}
+.menu_wrapper ul {
+  margin: auto;
+  padding: 0;
+}
+.menu_wrapper ul li {
+  width: 24.7%;
+  font-size: 20px;
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  transition: background .5s;
+  text-align: center;
+  border-right: 2px solid black;
+}
+.menu_wrapper ul li:hover {
+  background: #000;
+  color: #f16521;
+  cursor: pointer;
+  transition: background .5s;
+}
+
+.menu_wrapper ul li:hover a {
+  color: #f16521;
+}
+
+.menu_wrapper ul li a {
+  text-decoration: none;
+  color: black;
+}
+.menu_wrapper ul .last {   /*-- "Doces" --*/
+  border-right: none;
+}
+
+/*--- Pesquisa ---*/
+
+.header_bottom {
+  width: auto;
+  overflow: auto;
+}
+.search {
+  margin: 1em 0 0 1em;
+}
+.search input {
+  border-radius: 5px;
+  width: 40%;
+}
+
+/*---------------------------------/content/----------------------------------*/
+.content {
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+.filter {
+  float: left;
+  border: 2px solid #f16521;
+  border-radius: 5px;
+  margin: 1em;
+}
+.filter h2 {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid #f16521;
+  margin: 0 0 0.5em 0;
+}
+.filter h3 {
+  border-top: 1px solid #f16521;
+  border-bottom: 1px solid #f16521;
+  padding: 0.25em;
+}
+.filter input {
+  margin: 0.5em;
+}
+.filter_search {
+  margin-top: 1em;
+}
+.filter_search input {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.content_top table {
+  text-align: center;
+}
+.establishment {
+  background-color: #fff;
+  border: 2px solid #f16521;
+  border-radius: 5px;
+  float: left;
+  padding: 0.5em;
+  margin: 1em 0.5em;
+}
+.image {
+  margin-bottom: 0.5em;
+  border: 1px solid #f16521;
+  border-radius: 5px;
+}
+.title h1 {
+  float: left;
+  margin: 0;
+}
+.rating {
+  float: right;
+  color: green;
+  margin: 0;
+}
+.text {
+  float: left;
+  text-align: left;
+}
+
+/*---------------------------------/footer/-----------------------------------*/
+.footer {
+  overflow: auto;
+  background-color: #000;
+  margin-top: 200px;
+}
+.made {
+  margin: auto;
+  padding-top: 10px;
+  color: #f16521;
+  font-weight: bolder;
+  text-align: center;
+  vertical-align: middle;
+}
+.workers {
+  margin: auto;
+  padding-top: 10px;
+  color: #fff;
+  font-weight: lighter;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
