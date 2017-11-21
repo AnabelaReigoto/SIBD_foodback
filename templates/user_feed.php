@@ -17,14 +17,6 @@
         //-->
     </script>
 
-    <style>
-       #map {
-        height: 200px;
-        width: 300px;
-        background: grey;
-       }
-    </style>
-
   </head>
   <body>
     <div class="wrapper">
@@ -109,6 +101,7 @@
       <div class="content">
         <div class="content_top">
           <div class="title">
+            <img src="FOTOS/user.png" alt="user">
             <h1>Baltasar Aroso</h1>
             <p>15 opiniões, 140 seguidores</p>
           </div>
