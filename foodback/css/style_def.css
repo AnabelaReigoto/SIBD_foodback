@@ -1,0 +1,241 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: auto;
+  overflow: auto;
+}
+
+/*---------------------------------/header/-----------------------------------*/
+.header {
+  width: auto;
+  overflow-x: hidden;
+}
+
+/*--- LOGO + Login ---*/
+.header_top {
+  width: 100vw;
+  overflow: auto;
+  border-bottom: 3px solid #f16521;
+  background: url("../images/meal.jpg") no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: scroll;
+  height:15vh;
+}
+.login {
+  width: auto;
+  overflow: auto;
+  padding-right: 2vw;
+  padding-top: 1vw;
+
+}
+.registar {
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0 0 0.5em;
+  font-weight: bolder;
+}
+.entrar {
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0.5em 0 0;
+  font-weight: bolder;
+  border-right: 1px solid #fff;
+}
+#popup_registar, #popup_entrar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+}
+.popup_container {
+  width: 30%;
+  margin: 75px auto;
+  text-align: left;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+}
+.window {
+  padding: 0.5em;
+  background-color: #f1f1f1;
+  margin-bottom: 1em;
+}
+.window h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0 auto;
+}
+.cross {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  float: right;
+}
+.cross:hover,
+.cross:focus {
+  color: red;
+  cursor: pointer;
+}
+.dados input {
+  width: 100%;
+  margin: 0.5em 0 2em 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.enterbtn {
+  width: 100%;
+  padding: 1em 10em;
+  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  box-sizing: border-box; /*Verificar como se mantem o tamanho no page resize*/
+}
+.enterbtn :hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
+.rodape {
+  background-color: #f1f1f1;
+  display: block;
+}
+.psw a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 12px;
+  padding: 0.5em;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+/**********************/
+
+.header_top a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}
+.logo {
+  width: 70%;
+}
+.logo img {
+  overflow: auto;
+  display: block;
+  width: 20vw;
+  margin-left:2vw;
+}
+.slogan h5 {
+  width: 100%;
+  text-align: left;
+  display: block;
+  overflow: auto;
+  margin: 0 0 0 2vw;
+  font-size: 8px;
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+}
+
+/*---------------------------------/content/----------------------------------*/
+
+.content {
+  width: auto;
+  overflow: auto;
+}
+.content_user {
+  margin-bottom: 50px;
+  margin: 1em 14.3vw;
+  width: auto;
+  overflow: auto;
+}
+.title img {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.title h1 {
+  display: block;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.content_user button {
+  background-color: #f16521;
+}
+.content_user h2 {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: #f16521;
+}
+.content_user h3 {
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  display: block;
+  text-align: left;
+  color: #f16521;
+  font-weight: normal;
+}
+.change_psw {
+  display: flex;
+  flex-direction: column;
+}
+.change_psw input {
+  margin: 0.5em 0 2em 0;
+}
+
+
+
+/*---------------------------------/footer/-----------------------------------*/
+.footer {
+  width: auto;
+  overflow: auto;
+  background-color: #000;
+  margin-top: 200px;
+}
+.made {
+  margin: auto;
+  padding-top: 10px;
+  color: #f16521;
+  font-weight: bolder;
+  text-align: center;
+  vertical-align: middle;
+}
+.workers {
+  margin: auto;
+  padding-top: 10px;
+  color: #fff;
+  font-weight: lighter;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
