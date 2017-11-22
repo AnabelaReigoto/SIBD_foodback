@@ -6,7 +6,7 @@ include ('/usr/users2/mieec2014/up201405662/public_html/foodback/database/users.
   $password = $_POST['password'];
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $morada = $_POST['morada'];
+  $address = $_POST['address'];
 
   if (!$username || !$password) {
     $_SESSION['error_message'] = 'All fields are mandatory!';
@@ -15,7 +15,7 @@ include ('/usr/users2/mieec2014/up201405662/public_html/foodback/database/users.
   }
 
   try {
-    createUser($username, $password,$name,$email,$morada);
+    createUser($username, $password,$name,$email,$address);
     $_SESSION['success_message'] = 'User registered with success!';
   } catch (PDOException $e) {
 

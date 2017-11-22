@@ -29,73 +29,79 @@
 
         <div class="header_top">
           <div class="login">
-            <!-- Registar -->
-            <div class="registar">
-              <a href="javascript:void(0)" onclick="change('popup_registar')">Registar</a>
-            </div>
-
-            <!-- POPUP - registar -->
-            <div id="popup_registar">
-              <div class="popup_container animate">
-                <div class="window">
-                  <span class="cross" href="javascript:void(0)" onclick="change('popup_registar')">&times;</span>
-                  <h3>Criar Conta</h3>
-                </div>
-                <div class="dados">
-                  <form method="post" action="action_register.php">
-                    <label><b>Nome</b></label>
-                    <input type="text" placeholder="Nome" name="name" required>
-
-                    <label><b>Email</b></label>
-                    <input type="text" placeholder="Email" name="email"  required>
-
-                    <label><b>Morada</b></label>
-                    <input type="text" placeholder="Morada" name="morada"  required>
-
-                    <label><b>Nome de utilizador</b></label>
-                    <input type="text" placeholder="Nome de Utilizador" name="username" value ="<?$username?>" required>
-
-                    <label><b>Palavra-Passe</b></label>
-                    <input type="password" placeholder="Palavra-Passe" name="password"  required>
-                    <button class="enterbtn" type="submit" href="javascript:void(0)" onclick="change('popup_registar')">Registar</button>
-                  </form>
-                </div>
+            <?php if (isset($_SESSION['username'])) { ?>
+              <div class="session">
+                <?=$_SESSION['username']?> <a href="action_logout.php">Logout</a> <a href="definitions.php">Definições</a>
               </div>
-            </div>
-
-            <!-- Entrar -->
-            <div class="entrar">
-              <a href="javascript:void(0)" onclick="change('popup_entrar')">Entrar</a>
-            </div>
-
-            <!-- POPUP - entrar -->
-            <div id="popup_entrar">
-              <div class="popup_container animate">
-                <div class="window">
-                  <span class="cross" href="javascript:void(0)" onclick="change('popup_entrar')">&times;</span>
-                  <h3>Entrar</h3>
+              <?php } else { ?>
+                <!-- Registar -->
+                <div class="registar">
+                  <a href="javascript:void(0)" onclick="change('popup_registar')">Registar</a>
                 </div>
-                <div class="dados">
-                  <label><b>Nome de utilizador</b></label>
-                  <input type="text" placeholder="Nome de Utilizador" name="username" required>
+                <!-- POPUP - registar -->
+                <div id="popup_registar">
+                  <div class="popup_container animate">
+                    <div class="window">
+                      <span class="cross" href="javascript:void(0)" onclick="change('popup_registar')">&times;</span>
+                      <h3>Criar Conta</h3>
+                    </div>
+                    <div class="dados">
+                      <form method="post" action="action_register.php">
+                        <label><b>Nome</b></label>
+                        <input type="text" placeholder="Nome" name="name" required>
 
-                  <label><b>Palavra-Passe</b></label>
-                  <input type="password" placeholder="Palavra-Passe" name="password" required>
+                        <label><b>Email</b></label>
+                        <input type="text" placeholder="Email" name="email"  required>
 
-                  <button class="enterbtn" type="submit" href="javascript:void(0)" onclick="change('popup_entrar')">Entrar</button>
+                        <label><b>Morada</b></label>
+                        <input type="text" placeholder="Morada" name="address"  required>
+
+                        <label><b>Nome de utilizador</b></label>
+                        <input type="text" placeholder="Nome de Utilizador" name="username" value ="<?$username?>" required>
+
+                        <label><b>Palavra-Passe</b></label>
+                        <input type="password" placeholder="Palavra-Passe" name="password"  required>
+                        <button class="enterbtn" type="submit" href="javascript:void(0)" onclick="change('popup_registar')">Registar</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
-                <div class="rodape">
-                  <span class="psw"><a href="#">Esqueceu-se da palavra-passe?</a></span>
-                </div>
-              </div>
-            </div>
 
+                <!-- Entrar -->
+                <div class="entrar">
+                  <a href="javascript:void(0)" onclick="change('popup_entrar')">Entrar</a>
+                </div>
+
+                <!-- POPUP - entrar -->
+                <div id="popup_entrar">
+                  <div class="popup_container animate">
+                    <div class="window">
+                      <span class="cross" href="javascript:void(0)" onclick="change('popup_entrar')">&times;</span>
+                      <h3>Entrar</h3>
+                    </div>
+                    <div class="dados">
+                      <form method="post" action="action_login.php">
+                        <label><b>Nome de utilizador</b></label>
+                        <input type="text" placeholder="Nome de Utilizador" name="username" required>
+
+                        <label><b>Palavra-Passe</b></label>
+                        <input type="password" placeholder="Palavra-Passe" name="password" required>
+
+                        <button class="enterbtn" type="submit" href="javascript:void(0)" onclick="change('popup_entrar')">Entrar</button>
+                      </form>
+                    </div>
+                    <div class="rodape">
+                      <span class="psw"><a href="#">Esqueceu-se da palavra-passe?</a></span>
+                    </div>
+                  </div>
+                </div>
+              <?php } ?>
           </div>
 
 
           <!-- Logo -->
           <div class="logo">
-            <img src="foodback_logo.png" alt="logo">
+            <img src="templates/FOTOS/foodback_logo.png" alt="logo">
               <!-- Slogan -->
                 <div class="slogan">
                     <h5>Because the belly also snores and the better opinions make the better choices!</h5>
@@ -129,7 +135,7 @@
             <th>
               <td class="establishment">
                 <div class="image">
-                  <img src="FOTOS/pizza.jpg" alt="logo" width="300">
+                  <img src="templates/FOTOS/pizza.jpg" alt="logo" width="300">
                 </div>
                 <div class="title">
                   <h1>Pincinello</h1>
@@ -143,7 +149,7 @@
               </td>
               <td class="establishment">
                 <div class="image">
-                  <img src="FOTOS/pizza.jpg" alt="logo" width="300">
+                  <img src="templates/FOTOS/pizza.jpg" alt="logo" width="300">
                 </div>
                 <div class="title">
                   <h1>Pincinello</h1>
@@ -157,7 +163,7 @@
               </td>
               <td class="establishment">
                 <div class="image">
-                  <img src="FOTOS/pizza.jpg" alt="logo" width="300">
+                  <img src="templates/FOTOS/pizza.jpg" alt="logo" width="300">
                 </div>
                 <div class="title">
                   <h1>Pincinello</h1>
@@ -171,7 +177,7 @@
               </td>
               <td class="establishment">
                 <div class="image">
-                  <img src="FOTOS/pizza.jpg" alt="logo" width="300">
+                  <img src="templates/FOTOS/pizza.jpg" alt="logo" width="300">
                 </div>
                 <div class="title">
                   <h1>Pincinello</h1>

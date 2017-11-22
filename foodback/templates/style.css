@@ -26,13 +26,15 @@ body {
   background-attachment: scroll;
   height:50vh;
 }
-.login {
-  width: auto;
-  overflow: auto;
-  padding-right: 4vw;
-  padding-top: 2vw;
 
+.session{
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0 0 0.5em;
+  font-weight: bolder;
 }
+
 .registar {
   width: auto;
   display: block;
