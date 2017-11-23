@@ -7,10 +7,10 @@ Made by:
 PHP code to be done:
 - [x] register
 - [x] login/logout
-- [ ] definitions
+- [x] definitions
 - [ ] menu user
 - [ ] search
-- [ ] printing establishments according to the menu wrapper selection
+- [x] printing establishments according to the menu wrapper selection
 - [ ] filter_search
 - [ ] comments
 - [ ] rating
