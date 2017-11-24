@@ -1,0 +1,65 @@
+/*---------------------------------/content/----------------------------------*/
+.content {
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+.filter {
+  float: left;
+  border: 2px solid #f16521;
+  border-radius: 5px;
+  margin: 1em;
+}
+.filter h2 {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid #f16521;
+  margin: 0 0 0.5em 0;
+}
+.filter h3 {
+  border-top: 1px solid #f16521;
+  border-bottom: 1px solid #f16521;
+  padding: 0.25em;
+}
+.filter input {
+  margin: 0.5em;
+}
+.filter_search {
+  margin-top: 1em;
+}
+.filter_search input {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.content_center table {
+  text-align: center;
+}
+.establishment {
+  background-color: #fff;
+  border: 2px solid #f16521;
+  border-radius: 5px;
+  float: left;
+  padding: 0.5em;
+  margin: 1em 0.5em;
+}
+.image {
+  margin-bottom: 0.5em;
+  border: 1px solid #f16521;
+  border-radius: 5px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.title h1 {
+  margin: 0;
+}
+.title h3 {
+  color: green;
+  margin: 0 0 auto auto;
+}
+.text p {
+  text-align: left;
+  margin: 1em 0 0 0;
+}
