@@ -5,10 +5,10 @@ Made by:
 - Baltasar Aroso
 
 PHP code to be done:
-- [x] register
-- [x] login/logout
-- [x] definitions
-- [ ] menu user
+- [x] register and verifications
+- [x] login/logout and verifications
+- [x] definitions and verifications
+- [x] menu user
 - [ ] search
 - [x] printing establishments according to the menu wrapper selection
 - [ ] filter_search
