@@ -1,0 +1,38 @@
+/*---------------------------------/header/-----------------------------------*/
+.header {
+  width: auto;
+  overflow-x: hidden;
+}
+/*--- LOGO + Login ---*/
+.header_top {
+  width: 100vw;
+  overflow: auto;
+  border-bottom: 3px solid #f16521;
+  background: url("../../images/meal.jpg") no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: scroll;
+  height:50vh;
+}
+.header_top a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  width: 100%;
+}
+.logo img {
+  overflow: auto;
+  display: block;
+  width: 40vw;
+  margin-left:30vw;
+}
+.slogan h5 {
+  text-align: center;
+  display: block;
+  overflow: auto;
+  margin: auto;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+}
