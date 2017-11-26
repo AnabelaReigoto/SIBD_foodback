@@ -16,13 +16,15 @@
     <title>foodback</title>
     <link rel="stylesheet"
     <?php if (strpos($_SERVER['REQUEST_URI'],'definitions.php') !== false) { ?>
-      href="css/test3.css"
+      href="css/def.css"
     <? } if (strpos($_SERVER['REQUEST_URI'],'establishment.php') !== false) { ?>
-      href="css/test2.css"
+      href="css/estab.css"
     <? } if (strpos($_SERVER['REQUEST_URI'],'user_feed.php') !== false) { ?>
-      href="css/test1.css"
+      href="css/feed.css"
+    <? } if (strpos($_SERVER['REQUEST_URI'],'edit_estab.php') !== false) { ?>
+      href="css/edit.css"
     <? } else { ?>
-      href="css/test.css"
+      href="css/homepage.css"
     <? } ?>
     >
     <meta charset="UTF-8">

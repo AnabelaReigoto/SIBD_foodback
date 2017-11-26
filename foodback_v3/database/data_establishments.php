@@ -112,7 +112,80 @@ function EstablishmentWasMusic($estab_id){
   else return false;
 }
 
+function changeNameEstab($id_estab, $name){
+  global $conn;
+
+  $stmt = $conn->prepare('UPDATE establishment SET name = ? WHERE id = ?');
+  $stmt->execute(array($name, $id_estab));
+}
+
+function changeEmailEstab($id_estab,$email){
+  global $conn;
+
+  $stmt = $conn->prepare('UPDATE establishment SET email = ? WHERE id = ?');
+  $stmt->execute(array($email, $id_estab));
+}
+
+function getIdCuisineByName($cuisine){
+  global $conn;
+
+  $stmt = $conn->prepare('SELECT id FROM cuisine WHERE name = ?');
+  $stmt->execute(array($cuisine));
+  return $stmt->fetch();
+
+}
+
+function changeCuisineEstab($id_estab,$cuisine){
+  global $conn;
+
+  $id_cuisine = getIdCuisineByName($cuisine);
+  $stmt = $conn->prepare('UPDATE hascuisine SET id_cuisine = ? WHERE id_estab = ?');
+  $stmt->execute(array($id_cuisine, $id_estab));
+}
+
+function changeContactEstab($id_estab,$contact){
+  global $conn;
+
+  $stmt = $conn->prepare('UPDATE establishment SET contact = ? WHERE id = ?');
+  $stmt->execute(array($contact, $id_estab));
+}
+
+function changePriceEstab($id_estab,$price){
+  global $conn;
+
+  $stmt = $conn->prepare('UPDATE establishment SET price = ? WHERE id = ?');
+  $stmt->execute(array($price, $id_estab));
+}
+
+function changeSchedule1Estab($id_estab,$schedule1){
+  global $conn;
+
+  $stmt = $conn->prepare('UPDATE establishment SET schedule1 = ? WHERE id = ?');
+  $stmt->execute(array($schedule1, $id_estab));
+}
+
+function changeSchedule2Estab($id_estab,$schedule2){
+  global $conn;
+
+  $stmt = $conn->prepare('UPDATE establishment SET schedule2 = ? WHERE id = ?');
+  $stmt->execute(array($schedule2, $id_estab));
+}
 
 
 
+
+function changeEstabInfo($id_estab,$wifi){
+  global $conn;
+
+  if($wifi === 'wifi'){
+    $stmt = $conn->prepare('SELECT COUNT(*) FROM hasinfo WHERE id_estab=? AND id_info = ?');
+    $stmt->execute(array($id_estab,1));
+    $n = $stmt->fetch();
+    if(n === 0) {
+      $stmt = $conn->prepare('INSERT INTO hasinfo VALUES(DEFAULT, ?, 1)');
+      $stmt->execute(array($id_estab));
+    }
+  }
+
+}
 ?>

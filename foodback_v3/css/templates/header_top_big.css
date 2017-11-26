@@ -8,7 +8,7 @@
   width: 100vw;
   overflow: auto;
   border-bottom: 3px solid #f16521;
-  background: url("../../images/meal.jpg") no-repeat center top fixed;
+  background: url("../../images/background.jpg") no-repeat center top fixed;
   background-size: cover;
   background-attachment: scroll;
   height:50vh;

@@ -21,7 +21,7 @@
       $_SESSION['error_message'] = 'Email is not valid!';
       echo ($_SESSION['error_message']);
       $_SESSION['form_values'] = $_POST;
-      die(header('Location: ../establishment.php'));
+      die(header('Location: ../register.php'));
     }
   }
 
@@ -56,7 +56,7 @@
        $_SESSION['error_message'] = 'Password is too long, maximum is 20 characters (4 min).';
        echo ($_SESSION['error_message']);
        $_SESSION['form_values'] = $_POST;
-       die(header('Location: ../definitions.php'));
+       die(header('Location: ../register.php'));
     }
   }
 
