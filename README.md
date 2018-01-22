@@ -1,27 +1,13 @@
-Final Project of the UC SIBD that consists in the creation of a site with databases about the feedback between users and restaurants, coffee, etc...
+Foodback | SIBD | MIEEC | FEUP - 1º Semester 2017/2018, Porto, Portugal
+
+Final Project of the UC SIBD that consists in the creation of a site with databases about the feedback between users and restaurants, coffees, etc...
+
+URL:
+- http://gnomo.fe.up.pt/~up201404125/SIBD_Foodback
 
 Made by:
 - Anabela Reigoto
 - Baltasar Aroso
 
-PHP code to be done:
-- [x] register and verifications
-- [x] login/logout and verifications
-- [x] definitions and verifications
-- [x] menu user
-- [ ] search
-- [x] printing establishments according to the menu wrapper selection
-- [ ] filter_search
-- [ ] comments
-- [ ] rating
-- [ ] establishment's photos
-- [ ] menu's photos
-- [ ] address from google api
-
-Utilities to be done:
-- [ ] change the page front with the costumers of the user
-- [ ] printing that costumers in his user_feed
-- [ ] adding more database (10 of each = 40)
-- [ ] insert localization in the filter
-- [ ] adding admin pages (edit link in establishment redirect to an editer page)
-- [ ] open the admin pages comparing the input inserted in the login with database
+*Note: In the upload of the photos, is necessary to reload the cache for the upload of the picture in the website.
+The photos are in a ziped file called "images" and organized by folders with the type of element (user, comment, establishemnt, ...).
