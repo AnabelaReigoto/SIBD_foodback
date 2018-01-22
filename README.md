@@ -9,6 +9,4 @@ Made by:
 - Anabela Reigoto
 - Baltasar Aroso
 
-Note:
-In the upload of the photos, is necessary to reload the cache for the upload of the picture in the website.
-The photos are in a ziped file called "images" and organized by folders with the type of element (user, comment, establishemnt, ...).
+Note: When uploading photos, you need to reload the cache to upload the image to the site. The photos are in a zip file called "images" and organized by folders with the type of element (user, comment, establishment, ...).
