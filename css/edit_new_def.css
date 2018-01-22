@@ -1,0 +1,15 @@
+/*---------------------------------------------------*/
+/*-- estab_edit.php & estab_new.php & user_def.php --*/
+/*---------------------------------------------------*/
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@import url("templates/initial.css");
+
+@import url("templates/header_top_small.css");
+
+@import url("templates/header.css");
+
+@import url("templates/content_edit_new_def.css");
+
+@import url("templates/footer.css");

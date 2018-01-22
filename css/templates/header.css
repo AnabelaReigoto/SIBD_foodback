@@ -1,0 +1,174 @@
+.login {
+  display: flex;
+  width: auto;
+  overflow: auto;
+  padding-right: 1vw;
+  padding-top: 1vw;
+  margin: 0 0 auto auto;
+  position: absolute;
+  right: 0;
+}
+.login * {
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  color: #f16521;
+}
+.logo {
+  margin: auto auto auto 0;
+}
+.user_space {
+  display: flex;
+  flex-direction: column;
+}
+.menu_user {
+  margin: 0 0 0 auto;
+  display: block;
+  display: none;
+  float: right;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.25em;
+  margin-top: 0;
+}
+.menu_user ul {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0.25em;
+
+}
+.top_user {
+  margin: 0 0 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 0.25em;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.2em 0.7em;
+  margin-bottom: 0;
+}
+.login:hover .menu_user {
+  display: block;
+  transition: .5s;
+}
+.top_user:hover {
+  cursor: pointer;
+  color: #f16521;
+  padding: 0.2em 1.5em;
+  transition: .5s;
+}
+.logout, .feed, .definitions_top, .new_estab, .filters, .homepage {
+  width: auto;
+  display: block;
+  float: right;
+  font-weight: bolder;
+}
+.visiter {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  float: right;
+  padding: 0.5em;
+}
+.registar {
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0 0 0.5em;
+  font-weight: bolder;
+}
+.entrar {
+  width: auto;
+  display: block;
+  float: right;
+  padding: 0 0.5em 0 0;
+  font-weight: bolder;
+  border-right: 1px solid #000;
+}
+#popup_registar, #popup_entrar {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+}
+.popup_container {
+  width: 30%;
+  margin: 75px auto;
+  text-align: left;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+}
+.window {
+  padding: 0.5em;
+  background-color: #f1f1f1;
+  margin-bottom: 1em;
+}
+.window h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0 auto;
+}
+span.cross {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  float: right;
+  margin: 0;
+}
+span.cross:hover {
+  color: red;
+  cursor: pointer;
+}
+.data input {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.75em 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.enterbtn {
+  width: 100%;
+  padding: 1em 10em;
+  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  box-sizing: border-box; /*Verificar como se mantem o tamanho no page resize*/
+}
+.enterbtn :hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -moz-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-moz-keyframes animatezoom {
+  from {-moz-transform: scale(0)}
+  to {-moz-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+/**********************/

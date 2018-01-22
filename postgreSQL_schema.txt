@@ -1,0 +1,491 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: foodback; Type: SCHEMA; Schema: -; Owner: sibd17g210
+--
+
+CREATE SCHEMA foodback;
+
+
+ALTER SCHEMA foodback OWNER TO sibd17g210;
+
+SET search_path = foodback, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: category; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE category (
+    id integer NOT NULL,
+    name character varying NOT NULL
+);
+
+
+ALTER TABLE category OWNER TO sibd17g210;
+
+--
+-- Name: category_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE category_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE category_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: category_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE category_id_seq OWNED BY category.id;
+
+
+--
+-- Name: comment; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE comment (
+    id integer NOT NULL,
+    feedback character varying,
+    id_estab integer,
+    username character varying,
+    date_time timestamp without time zone,
+    photo boolean,
+    rate integer
+);
+
+
+ALTER TABLE comment OWNER TO sibd17g210;
+
+--
+-- Name: comment_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE comment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE comment_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: comment_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE comment_id_seq OWNED BY comment.id;
+
+
+--
+-- Name: cuisine; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE cuisine (
+    id integer NOT NULL,
+    name character varying NOT NULL
+);
+
+
+ALTER TABLE cuisine OWNER TO sibd17g210;
+
+--
+-- Name: cuisine_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE cuisine_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE cuisine_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: cuisine_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE cuisine_id_seq OWNED BY cuisine.id;
+
+
+--
+-- Name: establishment; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE establishment (
+    id integer NOT NULL,
+    name character varying NOT NULL,
+    id_cat integer,
+    address character varying,
+    contact numeric(9,0),
+    zone character varying,
+    city character varying,
+    price integer,
+    schedule1 character varying,
+    schedule2 character varying
+);
+
+
+ALTER TABLE establishment OWNER TO sibd17g210;
+
+--
+-- Name: establishment_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE establishment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE establishment_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: establishment_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE establishment_id_seq OWNED BY establishment.id;
+
+
+--
+-- Name: hascuisine; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE hascuisine (
+    id integer NOT NULL,
+    id_estab integer,
+    id_cuisine integer
+);
+
+
+ALTER TABLE hascuisine OWNER TO sibd17g210;
+
+--
+-- Name: hascuisine_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE hascuisine_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE hascuisine_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: hascuisine_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE hascuisine_id_seq OWNED BY hascuisine.id;
+
+
+--
+-- Name: hasinfo; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE hasinfo (
+    id integer NOT NULL,
+    id_estab integer,
+    id_info integer
+);
+
+
+ALTER TABLE hasinfo OWNER TO sibd17g210;
+
+--
+-- Name: hasinfo_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE hasinfo_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE hasinfo_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: hasinfo_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE hasinfo_id_seq OWNED BY hasinfo.id;
+
+
+--
+-- Name: info; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE info (
+    id integer NOT NULL,
+    name character varying NOT NULL
+);
+
+
+ALTER TABLE info OWNER TO sibd17g210;
+
+--
+-- Name: info_id_seq; Type: SEQUENCE; Schema: foodback; Owner: sibd17g210
+--
+
+CREATE SEQUENCE info_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE info_id_seq OWNER TO sibd17g210;
+
+--
+-- Name: info_id_seq; Type: SEQUENCE OWNED BY; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER SEQUENCE info_id_seq OWNED BY info.id;
+
+
+--
+-- Name: users; Type: TABLE; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+CREATE TABLE users (
+    username character varying NOT NULL,
+    password character varying NOT NULL,
+    name character varying,
+    email character varying,
+    address character varying
+);
+
+
+ALTER TABLE users OWNER TO sibd17g210;
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY category ALTER COLUMN id SET DEFAULT nextval('category_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY comment ALTER COLUMN id SET DEFAULT nextval('comment_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY cuisine ALTER COLUMN id SET DEFAULT nextval('cuisine_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY establishment ALTER COLUMN id SET DEFAULT nextval('establishment_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY hascuisine ALTER COLUMN id SET DEFAULT nextval('hascuisine_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY hasinfo ALTER COLUMN id SET DEFAULT nextval('hasinfo_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY info ALTER COLUMN id SET DEFAULT nextval('info_id_seq'::regclass);
+
+
+--
+-- Name: category_name_key; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY category
+    ADD CONSTRAINT category_name_key UNIQUE (name);
+
+
+--
+-- Name: category_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY category
+    ADD CONSTRAINT category_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: comment_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY comment
+    ADD CONSTRAINT comment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: cuisine_name_key; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY cuisine
+    ADD CONSTRAINT cuisine_name_key UNIQUE (name);
+
+
+--
+-- Name: cuisine_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY cuisine
+    ADD CONSTRAINT cuisine_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: establishment_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY establishment
+    ADD CONSTRAINT establishment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: hascuisine_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY hascuisine
+    ADD CONSTRAINT hascuisine_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: hasinfo_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY hasinfo
+    ADD CONSTRAINT hasinfo_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: info_name_key; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY info
+    ADD CONSTRAINT info_name_key UNIQUE (name);
+
+
+--
+-- Name: info_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY info
+    ADD CONSTRAINT info_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users_email_key; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_email_key UNIQUE (email);
+
+
+--
+-- Name: users_pkey; Type: CONSTRAINT; Schema: foodback; Owner: sibd17g210; Tablespace:
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (username);
+
+
+--
+-- Name: comment_id_estab_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY comment
+    ADD CONSTRAINT comment_id_estab_fkey FOREIGN KEY (id_estab) REFERENCES establishment(id);
+
+
+--
+-- Name: comment_username_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY comment
+    ADD CONSTRAINT comment_username_fkey FOREIGN KEY (username) REFERENCES users(username);
+
+
+--
+-- Name: establishment_id_cat_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY establishment
+    ADD CONSTRAINT establishment_id_cat_fkey FOREIGN KEY (id_cat) REFERENCES category(id);
+
+
+--
+-- Name: hascuisine_id_cuisine_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY hascuisine
+    ADD CONSTRAINT hascuisine_id_cuisine_fkey FOREIGN KEY (id_cuisine) REFERENCES cuisine(id);
+
+
+--
+-- Name: hascuisine_id_estab_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY hascuisine
+    ADD CONSTRAINT hascuisine_id_estab_fkey FOREIGN KEY (id_estab) REFERENCES establishment(id);
+
+
+--
+-- Name: hasinfo_id_estab_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY hasinfo
+    ADD CONSTRAINT hasinfo_id_estab_fkey FOREIGN KEY (id_estab) REFERENCES establishment(id);
+
+
+--
+-- Name: hasinfo_id_info_fkey; Type: FK CONSTRAINT; Schema: foodback; Owner: sibd17g210
+--
+
+ALTER TABLE ONLY hasinfo
+    ADD CONSTRAINT hasinfo_id_info_fkey FOREIGN KEY (id_info) REFERENCES info(id);
+
+
+--
+-- PostgreSQL database dump complete
+--

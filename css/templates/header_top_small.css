@@ -1,0 +1,42 @@
+/*---------------------------------/header/-----------------------------------*/
+.header {
+  width: auto;
+  overflow-x: hidden;
+}
+/*--- LOGO + Login ---*/
+.header_top {
+  width: 100vw;
+  overflow: auto;
+  border-bottom: 3px solid #f16521;
+  background: url("../../images/header_small.jpeg") no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: scroll;
+  height:15vh;
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 135px;
+}
+.header_top a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}
+.logo {
+  width: 70%;
+}
+.logo img {
+  overflow: auto;
+  display: block;
+  width: 20vw;
+  margin-left:2vw;
+}
+.slogan h5 {
+  text-align: left;
+  display: block;
+  overflow: auto;
+  margin: 0 0 0 2vw;
+  font-size: 8px;
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+}

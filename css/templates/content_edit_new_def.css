@@ -1,0 +1,102 @@
+/*---------------------------------/content/----------------------------------*/
+
+.content {
+  width: auto;
+  overflow: auto;
+}
+.content_edit_new_def {
+  margin: 1em auto;
+  margin-bottom: 50px;
+  width: 70vw;
+  overflow: auto;
+}
+.title img {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.title h1 {
+  display: block;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.content_edit_new_def button {
+  background-color: #f16521;
+}
+.content_edit_new_def button:hover {
+  background-color: black;
+  color: #f16521;
+}
+.content_edit_new_def h2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: #f16521;
+}
+.content_edit_new_def h3 {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  display: block;
+  text-align: left;
+  color: #f16521;
+  font-weight: normal;
+}
+
+/*---- content_estab_edit & content_estab_new ----*/
+
+.data form select {
+  width: 70vw;
+  margin: 0.75em 0 0 0;
+}
+.specs {
+  display: flex;
+  flex-direction: column;
+}
+.spec_row {
+  display: flex;
+  flex-direction: row;
+  margin: auto auto auto 0;
+}
+.spec_row h5 {
+  white-space: nowrap;
+  margin: auto;
+  padding: 1em;
+  vertical-align: center;
+}
+.spec_row input {
+  margin: auto;
+  width: auto;
+}
+.change_menu {
+  padding-left: 1em;
+}
+.change_menu h5 {
+  margin-bottom: 1em;
+}
+.change_menu select {
+  margin-bottom: 0.5em;
+}
+.change_photos input {
+  margin-bottom: 2.5em;
+}
+.photo_user form {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0 2em 0;
+}
+.photo_user input {
+  margin: 0 1em;
+}
+
+
+/*---- content_user_def ----*/
+
+.change_psw input {
+  width: 100%;
+  padding: 0.5em;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.5em 0 2em 0;
+}

@@ -1,0 +1,62 @@
+/*--- MENU - header center ---*/
+
+.menu_wrapper {
+  display: flex;
+}
+.filter_icon {
+  margin: auto 0.2em;
+}
+.filter_icon a {
+  background-color: #f16521;
+  font-size: 16px;
+  padding: 1.05em 1rem;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+.filter_icon a:hover {
+  background-color: black;
+  color: #f16521;
+}
+.menu_wrapper ul {
+  width: 100vw;
+  padding: 0;
+  background-color: #f16521;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  margin-right: 0.2em;
+}
+.menu_wrapper ul a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 0.85em 2em;
+  min-width: 5%;
+}
+.menu_wrapper ul a:hover {
+  background-color: black;
+  color: #f16521;
+  border-radius: 5px;
+}
+#menu_selected {
+  background-color: black;
+  color: #f16521;
+  border-radius: 5px;
+}
+
+/*--- Pesquisa ---*/
+
+.header_bottom {
+  width: auto;
+  overflow: auto;
+}
+.search {
+  margin: 0 0 0 1em;
+}
+.search input {
+  border-radius: 5px;
+  width: 14em;
+}

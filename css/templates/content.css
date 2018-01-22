@@ -1,0 +1,133 @@
+/*---------------------------------/content/----------------------------------*/
+.content {
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+.filter {
+  float: left;
+  border: 2px solid #f16521;
+  border-radius: 5px;
+  margin: 1em;
+}
+.filter h2 {
+  padding: 1em 4.15em;
+  text-align: center;
+  margin: 1em auto auto auto;
+}
+.filter h3 {
+  border-top: 1px solid #f16521;
+  border-bottom: 1px solid #f16521;
+  padding: 0.25em;
+}
+.filter h4 {
+  margin: 1em 0 0.25em 0.55em;;
+}
+.filter input {
+  margin: 0.5em;
+}
+.filter_search {
+  margin-top: 1em;
+}
+.filter_search input {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0.25em;
+  border: 1px solid #f16521;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.filter_search input:hover {
+  background-color: #f16521;
+  color: black;
+}
+.filter select {
+  display: flex;
+  margin: 0 2.1em;
+  padding: 0 0 0 0.5em;
+}
+#city {
+  margin: 0.5em 0.5em;
+}
+.content_center table {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.content_center table tr {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content_center table tr td:hover {
+  cursor: pointer;
+  border-color: black;
+}
+.establishment {
+  background-color: #fff;
+  border: 2px solid #f16521;
+  border-radius: 5px;
+  float: left;
+  padding: 0.5em;
+  margin: 1em 0.5em;
+}
+.image {
+  margin-bottom: 0.5em;
+}
+.image img {
+  width: 28em;
+  height: 20em;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.title h1 {
+  margin: 0;
+  padding-right: 0.5em;
+}
+.rate_estab_2 {
+  color: red;
+  margin: 0 0 auto auto;
+}
+.rate_estab_3 {
+  color: orange;
+  margin: 0 0 auto auto;
+}
+.rate_estab_4 {
+  color: gold;
+  margin: 0 0 auto auto;
+}
+.rate_estab_5 {
+  color: green;
+  margin: 0 0 auto auto;
+}
+.rate_estab_none {
+  display: none;
+}
+.text p {
+  text-align: left;
+  margin: 1em 0 0 0;
+}
+#pagination {
+  margin: 4em;
+  bottom: 0;
+  text-align: center;
+  color: black;
+}
+
+/*---- map_filter ---*/
+.content_map {
+  width: 70vw;
+  margin: 2em auto;
+}
+.mapa {
+margin: 2em 10.5em 2em 30em;
+}
+#map_user {
+  height: 20em;
+  width: 70vw
+  padding: 0;
+}
