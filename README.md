@@ -15,6 +15,7 @@ Final Project of the SIBD (Information Systems and Databases) curricular unit th
 - costumized comments that can include photos, rating and text.
 - Ajax in the comments reload
 - Anti SQL injection
+- Anti Cross-Site Scripting (XSS)
 - Google Maps API for analyzing the distance between the establishment and the user on the map, and for addresses verification in the registration
 
 URL only accessed with active VPN and for FEUP people:
